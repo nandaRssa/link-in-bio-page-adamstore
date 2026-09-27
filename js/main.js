@@ -293,4 +293,31 @@ document.addEventListener('DOMContentLoaded', () => {
       showToast('Terima kasih. Laporan akan ditinjau oleh tim keamanan.');
     });
   }
+
+  // Automatic Smooth Subtle Zoom-In on Scroll (Zooms once softly and stays; zooms out when back at top)
+  const bgImg = document.getElementById('bgImg') || document.querySelector('.bg-wallpaper');
+  if (bgImg) {
+    let isTicking = false;
+    const handleScrollZoom = () => {
+      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollY > 20) {
+        bgImg.classList.add('is-zoomed');
+      } else {
+        bgImg.classList.remove('is-zoomed');
+      }
+      isTicking = false;
+    };
+
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (!isTicking) {
+          window.requestAnimationFrame(handleScrollZoom);
+          isTicking = true;
+        }
+      },
+      { passive: true }
+    );
+  }
 });
+

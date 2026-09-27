@@ -44,8 +44,10 @@
     <div class="edge-glow edge-glow-left" aria-hidden="true"></div>
     <div class="edge-glow edge-glow-right" aria-hidden="true"></div>
 
-    <!-- Background Wallpaper (Pure Photo, No Tint) -->
-    <div class="bg-wallpaper" aria-hidden="true"></div>
+    <!-- Background Wallpaper (Pure Photo, Fixed & Zoomable) -->
+    <div class="bg-wallpaper" aria-hidden="true">
+      <img src="assets/images/background.jpeg" alt="" class="bg-img" id="bgImg" />
+    </div>
 
     <!-- Main Container -->
     <div class="page-wrapper">
@@ -236,10 +238,12 @@
               </svg>
             </a>
             <a
-              href="#"
+              href="https://www.tiktok.com/@adam_real_jb"
+              target="_blank"
+              rel="noopener noreferrer"
               class="social-icon-btn"
               id="socialTiktokBtn"
-              title="TikTok @adamstore"
+              title="TikTok @adam_real_jb"
               aria-label="TikTok"
             >
               <svg
@@ -284,12 +288,12 @@
         <section class="links-container" id="linksContainer">
           <!-- 1. Saluran WA ( Stok Akun) -->
           <a
-            href="https://whatsapp.com/channel/"
+            href="https://whatsapp.com/channel/0029Vb7sAUJDDmFUv5SfKT3G"
             target="_blank"
             rel="noopener noreferrer"
             class="link-card"
             id="btn-stok-akun"
-            data-category="wa stok"
+            data-category="wa stok saluran akun"
           >
             <div class="link-card-inner">
               <span class="link-icon wa-icon">
@@ -324,12 +328,12 @@
 
           <!-- 2. WA Jual Akun -->
           <a
-            href="https://wa.me/"
+            href="https://wa.me/6281901961080?text=Halo%20Admin%20adamstore,%20saya%20mau%20jual%20akun%20FF"
             target="_blank"
             rel="noopener noreferrer"
             class="link-card"
             id="btn-jual-akun"
-            data-category="wa jual"
+            data-category="wa jual akun 081901961080"
           >
             <div class="link-card-inner">
               <span class="link-icon wa-icon">
@@ -364,12 +368,12 @@
 
           <!-- 3. WA Beli Akun -->
           <a
-            href="https://wa.me/"
+            href="https://wa.me/6281901961080?text=Halo%20Admin%20adamstore,%20saya%20mau%20beli%20akun%20FF"
             target="_blank"
             rel="noopener noreferrer"
             class="link-card"
             id="btn-beli-akun"
-            data-category="wa beli"
+            data-category="wa beli akun 081901961080"
           >
             <div class="link-card-inner">
               <span class="link-icon wa-icon">
@@ -404,7 +408,7 @@
 
           <!-- 4. Saluran Rental FF -->
           <a
-            href="https://whatsapp.com/channel/"
+            href="https://whatsapp.com/channel/0029Vb8NrGe2UPBKuxkDuc3A"
             target="_blank"
             rel="noopener noreferrer"
             class="link-card"
@@ -450,7 +454,7 @@
 
           <!-- 5. Saluran Japost -->
           <a
-            href="https://whatsapp.com/channel/"
+            href="https://whatsapp.com/channel/0029Vb982HHJJhzgRQnJby0N"
             target="_blank"
             rel="noopener noreferrer"
             class="link-card"
@@ -493,12 +497,12 @@
 
           <!-- 6. GRUP 1 -->
           <a
-            href="https://chat.whatsapp.com/"
+            href="https://chat.whatsapp.com/HxxISjK15VTB1E4BuwQlZZ"
             target="_blank"
             rel="noopener noreferrer"
             class="link-card"
             id="btn-grup-1"
-            data-category="grup 1 komunitas"
+            data-category="grup 1 komunitas whatsapp"
           >
             <div class="link-card-inner">
               <span class="link-icon group-icon">
@@ -538,12 +542,12 @@
 
           <!-- 7. GRUP 2 -->
           <a
-            href="https://chat.whatsapp.com/"
+            href="https://chat.whatsapp.com/JklPlyIxz2rG2RrGzo8Eh7"
             target="_blank"
             rel="noopener noreferrer"
             class="link-card"
             id="btn-grup-2"
-            data-category="grup 2 komunitas"
+            data-category="grup 2 komunitas whatsapp"
           >
             <div class="link-card-inner">
               <span class="link-icon group-icon">
@@ -583,12 +587,12 @@
 
           <!-- 8. TikTok -->
           <a
-            href="https://tiktok.com/@adamstore"
+            href="https://www.tiktok.com/@adam_real_jb"
             target="_blank"
             rel="noopener noreferrer"
             class="link-card"
             id="btn-tiktok"
-            data-category="tiktok sosmed video"
+            data-category="tiktok sosmed video adam_real_jb"
           >
             <div class="link-card-inner">
               <span class="link-icon tiktok-icon">
@@ -627,33 +631,34 @@
           </div>
         </section>
 
-        <!-- Signature LYNK Badge -->
-        <footer class="lynk-footer-badge">
-          <a
-            href="https://lynk.id"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="lynk-pill"
-          >
-            <span>Built by</span>
-            <span class="lynk-logo-text">NVR</span>
-          </a>
-        </footer>
       </main>
     </div>
 
-    <!-- Bottom Left Floating Report Button (Exactly like Lynk.id) -->
-    <aside class="floating-report-widget">
-      <button
-        type="button"
-        class="btn-report"
-        id="btnReport"
-        aria-label="Laporkan Halaman"
-      >
-        <span class="info-circle-icon">ⓘ</span>
-        <span>Report</span>
-      </button>
-    </aside>
+    <!-- Fixed Lynk.id White Bottom Bar -->
+    <footer class="lynk-sticky-bar" id="lynkStickyBar">
+      <div class="sticky-bar-container">
+        <button
+          type="button"
+          class="btn-report"
+          id="btnReport"
+          aria-label="Laporkan Halaman"
+        >
+          <span class="info-circle-icon">ⓘ</span>
+          <span>Report</span>
+        </button>
+
+        <a
+          href="https://lynk.id"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="sticky-branding"
+          aria-label="Built by NVR"
+        >
+          <span class="branding-text">built by</span>
+          <span class="branding-brand">NVR</span>
+        </a>
+      </div>
+    </footer>
 
     <!-- Share Modal Dialog -->
     <div class="modal-backdrop" id="shareModal" aria-hidden="true">

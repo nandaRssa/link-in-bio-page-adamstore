@@ -26,17 +26,15 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-html,
+html {
+  background-color: #000000;
+}
+
 body {
   width: 100%;
   min-height: 100vh;
   font-family: var(--font-family);
-  background-color: transparent;
-  background-image: url("../assets/images/background.jpeg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: transparent;
   color: var(--text-main);
   overflow-x: hidden;
   position: relative;
@@ -73,8 +71,8 @@ body {
 
 /* ==========================================================
    Background Wallpaper (Pure Image, No Dark Overlay)
-   - Laptop: Zoomed to full screen (cover)
-   - Handphone: Menyesuaikan ukuran foto
+   - Fixed position, smooth automatic zoom on scroll
+   - Mobile: Fit full view perfectly without awkward cropping
    ========================================================== */
 .bg-wallpaper {
   position: fixed;
@@ -82,12 +80,27 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("../assets/images/background.jpeg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  z-index: -10;
+  height: 100dvh;
+  z-index: 0;
   pointer-events: none;
+  overflow: hidden;
+}
+
+.bg-wallpaper .bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transform-origin: center center;
+  will-change: transform;
+  transform: scale(1);
+  transition: transform 0.65s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+.bg-wallpaper.is-zoomed .bg-img,
+.bg-wallpaper .bg-img.is-zoomed {
+  transform: scale(1.06);
 }
 
 .bg-overlay {
@@ -719,58 +732,42 @@ body {
 }
 
 /* ==========================================================
-   Footer Lynk Badge
+   Fixed Lynk.id White Bottom Bar (Signature Lynk Bar)
    ========================================================== */
-.lynk-footer-badge {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 16px 20px 24px 20px;
-}
-
-.lynk-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 24px;
-  padding: 6px 16px;
-  font-size: 11px;
-  font-weight: 600;
-  color: #1e293b;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: all 0.2s ease;
-}
-
-.lynk-pill:hover {
-  background: #ffffff;
-  transform: scale(1.04);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
-}
-
-.lynk-logo-text {
-  font-weight: 900;
-  letter-spacing: 0.05em;
-  color: #000000;
-}
-
-/* ==========================================================
-   Floating Report Button (Bottom Left)
-   ========================================================== */
-.floating-report-widget {
+.lynk-sticky-bar {
   position: fixed;
-  bottom: 18px;
-  left: 20px;
-  z-index: 50;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 90;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.88) 35%,
+    #ffffff 75%,
+    #ffffff 100%
+  );
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 16px 20px 14px 20px;
+  pointer-events: auto;
+}
+
+.sticky-bar-container {
+  max-width: var(--card-max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
 .btn-report {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 20px;
   padding: 5px 12px;
@@ -778,8 +775,7 @@ body {
   font-weight: 600;
   color: #334155;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: all 0.2s ease;
 }
 
@@ -787,12 +783,39 @@ body {
   background: #ffffff;
   color: #0f172a;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .info-circle-icon {
   font-size: 13px;
   color: #64748b;
+}
+
+.sticky-branding {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.sticky-branding:hover {
+  transform: scale(1.05);
+}
+
+.branding-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.branding-brand {
+  font-size: 14px;
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: 0.04em;
 }
 
 /* ==========================================================
@@ -965,8 +988,6 @@ body {
    - Handphone: Background fit/menyesuaikan ukuran foto
    ========================================================== */
 @media (max-width: 768px) {
-  html,
-  body,
   .bg-wallpaper {
     background-size: cover;
     background-position: center top;
@@ -979,6 +1000,7 @@ body {
 
   .profile-card {
     max-width: 100%;
+    padding-bottom: 95px;
   }
 
   /* Banner lebih tinggi di mobile, hanya sudut bawah melengkung */
@@ -1012,7 +1034,7 @@ body {
   }
 
   .links-container {
-    padding: 6px 12px 20px 12px;
+    padding: 6px 12px 14px 12px;
     gap: 13px;
   }
 
@@ -1026,8 +1048,7 @@ body {
     font-size: 0.9rem;
   }
 
-  .floating-report-widget {
-    bottom: 12px;
-    left: 12px;
+  .lynk-sticky-bar {
+    padding: 14px 14px 12px 14px;
   }
 }
