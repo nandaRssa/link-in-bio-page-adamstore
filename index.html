@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>
+      @adamstore | Official Verified Portal - Saluran, Jual Beli & Rental FF
+    </title>
+
+    <!-- Meta tags for SEO & Social Sharing -->
+    <meta
+      name="description"
+      content="Official Portal @adamstore - Saluran WA Stok Akun, WA Jual Beli Akun, Saluran Rental FF, Saluran Japost, dan Komunitas Grup Resmi."
+    />
+    <meta
+      name="keywords"
+      content="adamstore, rekber, stok akun ff, jual beli akun, rental ff, japost, grup wa, tiktok adamstore"
+    />
+    <meta property="og:title" content="@adamstore | Official Portal" />
+    <meta
+      property="og:description"
+      content="Official Portal @adamstore - Temukan semua link saluran WhatsApp, grup resmi, dan kontak jual beli akun terpercaya."
+    />
+    <meta property="og:image" content="assets/images/banner.jpg" />
+    <meta property="og:type" content="website" />
+
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body>
+    <!-- Ambient Neon Side Glows (Lynk.id Signature) -->
+    <div class="edge-glow edge-glow-left" aria-hidden="true"></div>
+    <div class="edge-glow edge-glow-right" aria-hidden="true"></div>
+
+    <!-- Background Wallpaper (Pure Photo, No Tint) -->
+    <div class="bg-wallpaper" aria-hidden="true"></div>
+
+    <!-- Main Container -->
+    <div class="page-wrapper">
+      <main class="profile-card" id="profileCard">
+
+        <!-- Banner Header Graphic — FIRST, starts at very top of screen -->
+        <div class="banner-container">
+          <img
+            src="assets/images/sampul_wide.jpg"
+            alt="Banner @adamstore"
+            class="banner-img"
+            loading="eager"
+          />
+          <div class="banner-gradient-overlay"></div>
+        </div>
+
+        <!-- Header Top Navigation Bar — Fixed overlay ON TOP of banner -->
+        <header class="card-navbar">
+          <button
+            type="button"
+            class="nav-btn menu-toggle"
+            id="btnMenu"
+            aria-label="Menu Informasi"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+
+          <div class="nav-center-badge">
+            <span class="pulse-indicator"></span>
+            <span>ONLINE STORE</span>
+          </div>
+
+          <button
+            type="button"
+            class="nav-btn search-toggle"
+            id="btnSearch"
+            aria-label="Cari Link"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </header>
+
+        <!-- Expandable Search Bar — slides down from top when opened -->
+        <div class="search-drawer" id="searchDrawer" aria-hidden="true">
+          <div class="search-input-wrapper">
+            <svg
+              class="search-icon-inside"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Cari tombol / link (misal: WA, Stok, Rental)..."
+              autocomplete="off"
+            />
+            <button
+              type="button"
+              class="clear-search-btn"
+              id="btnClearSearch"
+              aria-label="Hapus pencarian"
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+
+        <!-- Profile Avatar Section -->
+        <div class="avatar-wrapper">
+          <div class="avatar-ring">
+            <img
+              src="assets/images/profile.jpg"
+              alt="Avatar @adamstore"
+              class="avatar-img"
+            />
+            <div class="avatar-badge" title="Verified Creator">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#00e5ff">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Info Section -->
+        <div class="profile-info">
+          <h1 class="store-username" id="username">
+            <span>@adamstore</span>
+            <span class="verified-icon" title="Official Verified">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#00d26a">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+            </span>
+          </h1>
+
+          <!-- Store Bio & Official Note -->
+          <div class="store-bio">
+            <p class="bio-lead">Semua yang lu cari ada dibawah</p>
+            <p class="bio-warning">
+              <span class="warning-tag">Note :</span> Rekber tidak ada
+              pengalihan nomor dengan alasan apapun ( langsung buat grup dengan
+              nomor di bawah )
+            </p>
+          </div>
+
+          <!-- Social Icons Row (Matching lynk.id outline icons) -->
+          <div class="social-links-row">
+            <a
+              href="#"
+              class="social-icon-btn"
+              id="socialLinkBtn"
+              title="Kunjungi Website"
+              aria-label="Website"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+                ></path>
+                <path
+                  d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="social-icon-btn"
+              id="socialInstaBtn"
+              title="Instagram @adamstore"
+              aria-label="Instagram"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="social-icon-btn"
+              id="socialTiktokBtn"
+              title="TikTok @adamstore"
+              aria-label="TikTok"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.11V9.42a6.34 6.34 0 0 0-.86-.06 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.18z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="social-icon-btn"
+              id="socialShareBtn"
+              title="Bagikan Profil"
+              aria-label="Share"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="18" cy="5" r="3"></circle>
+                <circle cx="6" cy="12" r="3"></circle>
+                <circle cx="18" cy="19" r="3"></circle>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Link Buttons Section (Exactly as requested) -->
+        <section class="links-container" id="linksContainer">
+          <!-- 1. Saluran WA ( Stok Akun) -->
+          <a
+            href="https://whatsapp.com/channel/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-card"
+            id="btn-stok-akun"
+            data-category="wa stok"
+          >
+            <div class="link-card-inner">
+              <span class="link-icon wa-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.213 8.213 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.77 2.7 4.28 3.78.6.26 1.06.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"
+                  />
+                </svg>
+              </span>
+              <span class="link-label">Saluran WA ( Stok Akun)</span>
+              <span class="link-arrow">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 2. WA Jual Akun -->
+          <a
+            href="https://wa.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-card"
+            id="btn-jual-akun"
+            data-category="wa jual"
+          >
+            <div class="link-card-inner">
+              <span class="link-icon wa-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.213 8.213 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.77 2.7 4.28 3.78.6.26 1.06.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"
+                  />
+                </svg>
+              </span>
+              <span class="link-label">WA Jual Akun</span>
+              <span class="link-arrow">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 3. WA Beli Akun -->
+          <a
+            href="https://wa.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-card"
+            id="btn-beli-akun"
+            data-category="wa beli"
+          >
+            <div class="link-card-inner">
+              <span class="link-icon wa-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.213 8.213 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.77 2.7 4.28 3.78.6.26 1.06.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"
+                  />
+                </svg>
+              </span>
+              <span class="link-label">WA Beli Akun</span>
+              <span class="link-arrow">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 4. Saluran Rental FF -->
+          <a
+            href="https://whatsapp.com/channel/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-card"
+            id="btn-rental-ff"
+            data-category="saluran rental ff game"
+          >
+            <div class="link-card-inner">
+              <span class="link-icon game-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="6" y1="12" x2="10" y2="12"></line>
+                  <line x1="8" y1="10" x2="8" y2="14"></line>
+                  <line x1="15" y1="13" x2="15.01" y2="13"></line>
+                  <line x1="18" y1="11" x2="18.01" y2="11"></line>
+                  <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                </svg>
+              </span>
+              <span class="link-label">Saluran Rental FF</span>
+              <span class="link-arrow">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 5. Saluran Japost -->
+          <a
+            href="https://whatsapp.com/channel/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-card"
+            id="btn-saluran-japost"
+            data-category="saluran japost jasa post"
+          >
+            <div class="link-card-inner">
+              <span class="link-icon post-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 2L11 13"></path>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </span>
+              <span class="link-label">Saluran Japost</span>
+              <span class="link-arrow">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 6. GRUP 1 -->
+          <a
+            href="https://chat.whatsapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-card"
+            id="btn-grup-1"
+            data-category="grup 1 komunitas"
+          >
+            <div class="link-card-inner">
+              <span class="link-icon group-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </span>
+              <span class="link-label">GRUP 1</span>
+              <span class="link-arrow">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 7. GRUP 2 -->
+          <a
+            href="https://chat.whatsapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-card"
+            id="btn-grup-2"
+            data-category="grup 2 komunitas"
+          >
+            <div class="link-card-inner">
+              <span class="link-icon group-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </span>
+              <span class="link-label">GRUP 2</span>
+              <span class="link-arrow">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 8. TikTok -->
+          <a
+            href="https://tiktok.com/@adamstore"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-card"
+            id="btn-tiktok"
+            data-category="tiktok sosmed video"
+          >
+            <div class="link-card-inner">
+              <span class="link-icon tiktok-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.11V9.42a6.34 6.34 0 0 0-.86-.06 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.18z"
+                  />
+                </svg>
+              </span>
+              <span class="link-label">TikTok</span>
+              <span class="link-arrow">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- Empty Search State -->
+          <div class="empty-search-state" id="emptyState" style="display: none">
+            <p>Tidak ada link yang sesuai kata kunci</p>
+          </div>
+        </section>
+
+        <!-- Signature LYNK Badge -->
+        <footer class="lynk-footer-badge">
+          <a
+            href="https://lynk.id"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="lynk-pill"
+          >
+            <span>Built by</span>
+            <span class="lynk-logo-text">NVR</span>
+          </a>
+        </footer>
+      </main>
+    </div>
+
+    <!-- Bottom Left Floating Report Button (Exactly like Lynk.id) -->
+    <aside class="floating-report-widget">
+      <button
+        type="button"
+        class="btn-report"
+        id="btnReport"
+        aria-label="Laporkan Halaman"
+      >
+        <span class="info-circle-icon">ⓘ</span>
+        <span>Report</span>
+      </button>
+    </aside>
+
+    <!-- Share Modal Dialog -->
+    <div class="modal-backdrop" id="shareModal" aria-hidden="true">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3>Bagikan Halaman @adamstore</h3>
+          <button type="button" class="btn-close-modal" id="btnCloseShare">
+            &times;
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="share-desc">Salin link atau bagikan ke media sosial:</p>
+          <div class="share-copy-box">
+            <input type="text" id="shareUrlInput" readonly value="" />
+            <button type="button" id="btnCopyLink" class="btn-copy">
+              Salin
+            </button>
+          </div>
+          <div class="share-actions-row">
+            <a
+              href="#"
+              id="shareWaLink"
+              target="_blank"
+              class="share-circle-btn wa-share"
+              title="Share ke WhatsApp"
+            >
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.213 8.213 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.77 2.7 4.28 3.78.6.26 1.06.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              id="shareTelegramLink"
+              target="_blank"
+              class="share-circle-btn tg-share"
+              title="Share ke Telegram"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M22 2L11 13"></path>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toastNotification" aria-live="polite">
+      <span id="toastMessage">Tautan berhasil disalin!</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
