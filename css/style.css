@@ -32,7 +32,7 @@ body {
   min-height: 100vh;
   font-family: var(--font-family);
   background-color: transparent;
-  background-image: url("../assets/images/abstract-bg.jpeg");
+  background-image: url("../assets/images/background.jpeg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -82,7 +82,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("../assets/images/abstract-bg.jpeg");
+  background-image: url("../assets/images/background.jpeg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -986,7 +986,6 @@ body {
     height: 190px;
     border-radius: 0 0 20px 20px;
   }
-
 
   /* Di mobile, navbar dan search drawer full lebar layar */
   .card-navbar {
